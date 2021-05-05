@@ -1,0 +1,8 @@
+html 
+    head
+        title Продукты
+    body
+        h1 Продукты
+        ul 
+            each product, index in products 
+                li= (index+1) + "." + product.Title + " - " + product.Price + " рублей"

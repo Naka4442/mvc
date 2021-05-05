@@ -1,0 +1,21 @@
+html 
+    head
+        title Домашняя 
+    body
+        h1 Домашняя страница
+        h2 Хотите добавить продукт?
+        form(action="/addProducts", method="post")
+            input(type="text" placeholder="Название товара" id="title")
+            input(type="number" placeholder="Цена товара" id="price")
+            input(type="submit" value="Отправить" id="go")
+        h2 Хотите обновить продукт?
+        form(action="/updateProduct", method="post")
+            input(type="number" placeholder="Id" id="updateId")
+            input(type="text" placeholder="Название товара" id="updateTitle")
+            input(type="number" placeholder="Цена товара" id="updatePrice")
+            input(type="submit" value="Отправить" id="update")
+        h2 Хотите удалить продукт?
+        input(type="number" id="deleteId" placeholder="Id")
+        button#delete Удалить
+        script(src="./dist/bundle.js")
+        script(src="./dist/script.js")
